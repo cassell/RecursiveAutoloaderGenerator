@@ -1,0 +1,19 @@
+{
+	"name": "recursive-autoloader-generator/recursive-autoloader-generator",
+	"type": "library",
+	"description": "Recursive autoloader generator",
+	"keywords": ["autoloader"],
+	"homepage": "https://github.com/cassell/RecursiveAutoladerGenerator",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Andrew Cassell",
+			"email": "me@andrewcassell.com",
+			"homepage": "http://www.andrewcassell.com",
+			"role": "Web Application Developer"
+		}
+	],
+	"require": {
+		"php": ">=5.3.0",
+	}
+}
