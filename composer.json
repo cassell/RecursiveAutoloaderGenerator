@@ -19,5 +19,4 @@
 	"autoload": {
 		"psr-0": {"RecursiveAutoloaderGenerator": "src/"}
 	}
-    }
 }
