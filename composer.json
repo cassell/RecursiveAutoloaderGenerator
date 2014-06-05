@@ -3,7 +3,7 @@
 	"type": "library",
 	"description": "Recursive autoloader generator",
 	"keywords": ["autoloader"],
-	"homepage": "https://github.com/cassell/RecursiveAutoladerGenerator",
+	"homepage": "https://github.com/cassell/RecursiveAutoloaderGenerator",
 	"license": "MIT",
 	"authors": [
 		{
