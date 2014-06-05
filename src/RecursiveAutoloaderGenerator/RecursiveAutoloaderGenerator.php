@@ -80,14 +80,14 @@ class RecursiveAutoloaderGenerator
 					}
 					else
 					{
-						$namespace .= "\\";
+						$namespace .= "\\\\";
 					}
 					
 					foreach($classes as $class)
 					{
 						if(array_key_exists($class, $classmap) && $classmap[$class] != $fileInfo->getPathname())
 						{
-							throw new Exception("The class " . $class . " has already been declared in " . $classMap[$class] . " but is being redeclared in " . $fileInfo->getPathname());
+							throw new \Exception("The class " . $class . " has already been declared in " . $classmap[$class] . " but is being redeclared in " . $fileInfo->getPathname());
 						}
 
 						$classmap[$namespace.$class] = $fileInfo->getPathname();
