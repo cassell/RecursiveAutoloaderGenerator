@@ -70,7 +70,7 @@ class RecursiveAutoloaderGenerator
 		{
 			if($fileInfo->getExtension() == "php")
 			{
-				list($namespace,$classes) = $this->getClasessAndNamespaceFromFile($fileInfo->getPathname());
+				list($namespace,$classes) = $this->getClassesAndNamespaceFromFile($fileInfo->getPathname());
 				
 				if(count($classes) > 0)
 				{
@@ -87,7 +87,7 @@ class RecursiveAutoloaderGenerator
 					{
 						if(array_key_exists($class, $classmap) && $classmap[$class] != $fileInfo->getPathname())
 						{
-							throw new \Exception("The class " . $class . " has already been declared in " . $classmap[$class] . " but is being redeclared in " . $fileInfo->getPathname());
+							throw new \Exception("The class " . $class . " has already been declared in " . $classmap[$class] . " but is being re-declared in " . $fileInfo->getPathname());
 						}
 
 						$classmap[$namespace.$class] = $fileInfo->getPathname();
@@ -124,7 +124,7 @@ class RecursiveAutoloaderGenerator
 	}
 	
 	
-	private static function getClasessAndNamespaceFromFile($path)
+	private static function getClassesAndNamespaceFromFile($path)
 	{
 		$classes = array();
 		$namespace = null;
