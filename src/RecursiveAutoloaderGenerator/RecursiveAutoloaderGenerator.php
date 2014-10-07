@@ -145,7 +145,7 @@ class RecursiveAutoloaderGenerator
 					
 					$namespace = $tokens[$temp][1];
 				}
-				else if($token[0] == T_CLASS || $token[0] == T_INTERFACE )
+				else if(in_array($token[0],array(T_CLASS,T_INTERFACE,T_TRAIT)))
 				{
 					$temp = $i + 1;
 					while($tokens[$temp][0] != T_STRING)
